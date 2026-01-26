@@ -5,11 +5,9 @@ l = list(map(int, input().split()))
 
 c = Counter(l)
 
-mx = max(c.values())
-ans = []
+cnt = 0
 for value, count in c.items():
-    if count == mx:
-        ans.append(value)
+    if count == 1:
+        cnt += 1
 
-ans.sort()
-print(ans[0])
+print(cnt)

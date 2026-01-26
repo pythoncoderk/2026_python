@@ -2,14 +2,11 @@ from collections import Counter
 
 n = int(input())
 l = list(map(int, input().split()))
-
 c = Counter(l)
 
-mx = max(c.values())
-ans = []
+ans = 0
 for value, count in c.items():
-    if count == mx:
-        ans.append(value)
+    if count % 2 != 0:
+        ans += 1
 
-ans.sort()
-print(ans[0])
+print(ans)

@@ -6,10 +6,10 @@ l = list(map(int, input().split()))
 c = Counter(l)
 
 mx = max(c.values())
-ans = []
-for value, count in c.items():
-    if count == mx:
-        ans.append(value)
 
-ans.sort()
-print(ans[0])
+ans = 0
+for value, count in c.items():
+    if mx == count:
+        ans += 1
+
+print(ans)
