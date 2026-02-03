@@ -1,21 +1,17 @@
-# import lesson_package.utils
-# from lesson_package.talk import human
-# from lesson_package.talk import animal
+import builtins
 
-from lesson_package.talk import *
+builtins.print()
 
-# print(animal.sing())
-# print(animal.cry())
-#
-# # r = utils.say_twice('hello world!!!')
-# # print(r)
-#
-# print(human.sing())
-# print(human.cry())
+ranking = {
+    "A":100,
+    "B":85,
+    "C":95
+}
 
-try:
-    from lesson_package import utils
-except ImportError:
-    from lesson_package.tools import utils
+x = ranking.get("A")
+print(x)
 
-utils.say_twice("word")
+# for key in ranking:
+#     print(key)
+
+print(sorted(ranking, key=ranking.get, reverse=True))
