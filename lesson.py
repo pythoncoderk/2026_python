@@ -1,4 +1,13 @@
 import builtins
+import collections
+import os
+import sys
+
+import lesson_package
+
+import cofig
+
+print(lesson_package.__file__)
 
 builtins.print()
 
