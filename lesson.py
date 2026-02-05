@@ -1,11 +1,15 @@
-import cofig
-import lesson_package.talk.animal
+class Person(object):
+    def __init__(self, name):
+        self.name = name
+        print(self.name)
 
-# print(__name__)
+    def say_something(self):
+        print("I am {}. hello".format(self.name))
+        self.run(10)
 
+    def run(self, num):
+        print("run" * num)
 
-def main():
-    lesson_package.talk.animal.sing()
+person = Person("Mike")
+person.say_something()
 
-if __name__ == '__main__':
-    print(main)
