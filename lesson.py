@@ -1,21 +1,20 @@
-class Person(object):
-    def __init__(self, name):
-        self.name = name
+class Car(object):
+    def run(self):
+        print("run")
 
-    def say_something(self):
-        print('I am {}. hello'.format(self.name))
-        self.run(10)
+class ToyotaCar(Car):
+    pass
 
-    def run(self, num):
-        print('run' * num)
+class TeslaCar(Car):
+    def auto_run(self):
+        print("auto_run")
 
-    def __del__(self):
-        print("good bye")
-
-person = Person("Mike")
-person.say_something()
-
-del person
-
-print("######################")
-
+car = Car()
+car.run()
+print("##################")
+toyota = ToyotaCar()
+toyota.run()
+print("##################")
+tesla = TeslaCar()
+tesla.run()
+tesla.auto_run()
