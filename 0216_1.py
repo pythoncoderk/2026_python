@@ -8,8 +8,6 @@ class Circle:
     def ca(self, r):
         return r * r * Circle.pi
 
-print(Circle.pi)
 
-# circle = Circle()
-# print(circle.cl(100))
+print(Circle().cl(1))
 
