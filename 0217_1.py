@@ -17,3 +17,5 @@ taro.name = "太郎"
 taro.age = 20
 taro.born = "東京"
 taro.talk()
+
+print(globals())
