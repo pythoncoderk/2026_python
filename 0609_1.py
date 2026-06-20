@@ -10,7 +10,7 @@ expenses = [
 def total_amount(data):
     total = 0
     for item in data:
-        total += item["price"]
+        total += item["amount"]
     return total
 
 
@@ -21,9 +21,9 @@ def category_summary(data):
         category = item["category"]
 
         if category in summary:
-            summary[category] = item["amount"]
-        else:
             summary[category] += item["amount"]
+        else:
+            summary[category] = item["amount"]
 
     return summary
 
@@ -39,6 +39,8 @@ def filter_by_category(data, category):
 
 
 def average_amount(data):
+    if len(data) == 0:
+        return 0
     total = total_amount(data)
     return total / len(data)
 
